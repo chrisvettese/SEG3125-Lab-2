@@ -44,7 +44,7 @@ function populateListProductChoices() {
         }
     }
     if (restrictions === "") {
-        preselectedItems.innerHTML = "All grocery items are shown:"
+        preselectedItems.innerHTML = "All grocery items are shown."
     } else {
         preselectedItems.innerHTML = "We preselected products based on your restrictions: " + restrictions
     }
