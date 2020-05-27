@@ -17,17 +17,17 @@ function add(name, vegetarian, glutenFree, lactoseFree, organic, price) {
     });
 }
 
-add("Broccoli", true, true, true, true, "$1.99");
-add("Bread", true, false, true, false, "$2.35");
-add("Salmon", false, true, true, true, "$10.00");
-add("Skim Milk", true, true, false, false, "$4.50");
-add("2% Milk Lactose Free", true, true, true, true, "$4.50");
-add("Salted Butter", true, true, false, true, "$5.00");
-add("Apple", true, true, true, true, "$1.30");
-add("Yellow Onion", true, true, true, true, "$3.70");
-add("Jasmine Rice", true, true, true, false, "$5.90");
-add("Banana", true, true, true, false, "$2.45");
-add("Flour", true, false, true, false, "$1.10");
+add('Broccoli', true, true, true, true, '$1.99');
+add('Bread', true, false, true, false, '$2.35');
+add('Salmon', false, true, true, true, '$10.00');
+add('Skim Milk', true, true, false, false, '$4.50');
+add('2% Milk Lactose Free', true, true, true, true, '$4.50');
+add('Salted Butter', true, true, false, true, '$5.00');
+add('Apple', true, true, true, true, '$1.30');
+add('Yellow Onion', true, true, true, true, '$3.70');
+add('Jasmine Rice', true, true, true, false, '$5.90');
+add('Banana', true, true, true, false, '$2.45');
+add('Flour', true, false, true, false, '$1.10');
 
 //Sorts the products in order from least to most expensive
 products.sort((p1, p2) => (p1.price > p2.price) ? 1 : -1);
@@ -81,18 +81,18 @@ function getNumberFromPrice(priceString) {
 }
 
 function getPricedProduct(index) {
-    return products[index].name + "  " + products[index].price
+    return products[index].name + '  ' + products[index].price
 }
 
 function getKeyFromCheckboxId(id) {
     switch (id) {
         case 0:
-            return "vegetarian";
+            return 'vegetarian';
         case 1:
-            return "glutenFree";
+            return 'glutenFree';
         case 2:
-            return "lactoseFree";
+            return 'lactoseFree';
         case 3:
-            return "organic";
+            return 'organic';
     }
 }
