@@ -94,7 +94,7 @@ function selectedItems() {
 
     // build list of selected item
     const para = document.createElement("P");
-    para.innerHTML = "You selected : ";
+    para.innerHTML = "You selected: ";
     para.appendChild(document.createElement("br"));
     for (let i = 0; i < ele.length; i++) {
         if (ele[i].checked) {
@@ -106,7 +106,11 @@ function selectedItems() {
 
     // add paragraph and total price
     cart.appendChild(para);
-    cart.appendChild(document.createTextNode("Total Price is " + getTotalPrice(chosenProducts)));
+    let totalPrice = getTotalPrice(chosenProducts) + "";
+    if (totalPrice.length > 1 && totalPrice[totalPrice.length - 2] === ".") {
+        totalPrice += "0"
+    }
+    cart.appendChild(document.createTextNode("Total price is $" + totalPrice));
 
 }
 
